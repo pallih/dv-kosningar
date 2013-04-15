@@ -1,0 +1,51 @@
+{% extends "bootstrap_responsive.html" %}
+
+{% block body_content %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Kosningapróf DV í boði gogn.in</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/um">Um</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Kosningapróf DV</h1>
+        <br />
+        <p>Svör frambjóðenda við kosningaprófi DV eru að mörgu leyti ágætis leið til að átta sig á afstöðu frambjóðendanna.</p>
+        <p>Það er þó galli á framsetningu blaðsins að erfitt er að sjá á einum stað afstöðu til hverrar spurningu fyrir sig.</p>
+        <p>Hér er bætt úr því. Smelltu á hnappinn hér fyrir neðan til að skoða svör við spurningu 1 og þræddu þig svo áfram í gegnum allar 66 spurningarnar eða veldu spurningu hér að neðan.</p>
+        <p>
+          <p><div class="fb-like" data-href="http://x13.gogn.in/" data-send="true" data-width="450" data-show-faces="false"></div></p>
+        <a href="spurning/1" class="btn btn-success btn-large"><i class="icon-white icon-circle-arrow-right"></i> Fyrsta spurning </a><br /><br /></p>
+
+        {% for row in rows %}
+        <div>
+          <a href="/spurning/{{row[1]}}"button class="btn btn-info" id='submitBtn' name='submitBtn' value='{{ row[1] }}'><i class="icon-white icon-circle-arrow-right"></i> {{ row[0] }}</a><br /><br />
+        </div>
+        {% endfor %}
+      </div>
+      </div>
+
+{% endblock %}
