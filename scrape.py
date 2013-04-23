@@ -37,8 +37,10 @@ def get_candidate_photo_url(candidate_url):
     return candidate_photo[0].attrib['src']
 
 def get_questions(candidate_url):
+    print candidate_url
     candidate_dict = {}
     response = requests.get('http://dv.is'+candidate_url+'afstada')
+    print response.text
     root = lxml.html.fromstring(response.text)
     responses = root.xpath('//tr[@class="compare-question"]')
     batch = []
@@ -84,35 +86,35 @@ def print_question(number):
 
 
 # Get all the candidates
-#get_candidates(URL_FRAMBOD_YFIRLIT)
+get_candidates(URL_FRAMBOD_YFIRLIT)
+#print 'Got candidates'
 
 # Get each candidate photo
 
-#candidates = scraperwiki.sqlite.select('* from candidates where done=0')
-#for candidate in candidates:
+# candidates = scraperwiki.sqlite.select('* from candidates where done=0')
+# for candidate in candidates:
 #    candidate_photo_url = get_candidate_photo_url(candidate['candidate_url'])
 #    update_statement= 'update candidates SET candidate_photo_url='+ '"' +candidate_photo_url+ '"' +' WHERE candidate_url ='+ '"' + candidate['candidate_url']+ '"'
 #    scraperwiki.sqlite.execute(update_statement)
 #    scraperwiki.sqlite.commit()
     #print update_statement
 
+
 # Get questions
 
-# candidates = scraperwiki.sqlite.select('* from candidates where done=0 limit 1')
-# for candidate in candidates:
-#     get_questions(candidate['candidate_url'])
-# #    update_statement= 'update candidates SET candidate_photo_url='+ '"' +candidate_photo_url+ '"' +' WHERE candidate_url ='+ '"' + candidate['candidate_url']+ '"'
-# #    scraperwiki.sqlite.execute(update_statement)
-# #    scraperwiki.sqlite.commit()
-#     #print update_statement
+candidates = scraperwiki.sqlite.select('* from candidates where candidate_answer_status LIKE "cand ok" limit 1')
+for candidate in candidates:
+    get_questions(candidate['candidate_url'])
+print 'Got questions'
 
 # Get each candidate response
+while True:
+    get_candidate_responses()
 
-#while True:
-#    get_candidate_responses()
+print 'done'
 
 # print question response
 
-for number in range(1,67):
-    print_question(number)
+# for number in range(1,67):
+#     print_question(number)
 

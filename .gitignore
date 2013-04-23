@@ -33,3 +33,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+db.sqlite
+scraperwiki-rett.sqlite
+scraperwiki-rett2.sqlite
