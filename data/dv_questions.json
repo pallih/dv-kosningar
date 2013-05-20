@@ -1,0 +1,2621 @@
+[
+  {
+    "id": "0",
+    "title": "Kjördæmi",
+    "short": "Kjördæmi",
+    "name": "locale",
+    "choices": [
+      {
+        "id": 1,
+        "title": "Norðaustur"
+      },
+      {
+        "id": 1,
+        "title": "Norðvestur"
+      },
+      {
+        "id": 1,
+        "title": "Reykjavík norður"
+      },
+      {
+        "id": 1,
+        "title": "Reykjavík suður"
+      },
+      {
+        "id": 1,
+        "title": "Suður"
+      },
+      {
+        "id": 1,
+        "title": "Suðvestur"
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú eftirfarandi fullyrðingu: Frekari stóriðjuframkvæmdir eru íslensku samfélagi til framdráttar?",
+    "short": "Frekari stóriðjuframkvæmdir eru samfélaginu til framdráttar",
+    "name": "storidja",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að álver rísi í Helguvík á Reykjanesi?",
+    "short": "Álver rísi í Helguvík á Reykjanesi",
+    "name": "helguvik",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) því að auka kröfur til framleiðslufyrirtækja um mengunarvarnir á þeirra kostnað?",
+    "short": "Mengunarvarnir á kostnað framleiðslufyrirtækja",
+    "name": "mengunarv",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) hugmyndum um að þrjár virkjanir rísi í neðri hluta Þjórsár?",
+    "short": "Afstaða virkjana í neðri hluta Þjórsár",
+    "name": "thjorsar",
+    "note": "Verkefnisstjórn um rammaáætlun um vernd og nýtingu náttúrusvæða lagði til að reistar verði þrjár virkjanir í neðri hluta Þjórsár. Virkjanakostnirnir voru hinsvegar færðir í biðflokk áður en rammaáætlunin var samþykkt á Alþingi.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Hver eftirtalinna valmöguleika lýsir afstöðu þinni til aðildarviðræðna við Evrópusambandið best?",
+    "short": "Afstaða til aðildarviðræðna við Evrópusambandið",
+    "name": "adildav",
+    "note": "",
+    "choices": [
+      {
+        "id": 1,
+        "title": "Ísland á að halda áfram aðildarviðræðum og taka afstöðu til þess samnings sem býðst"
+      },
+      {
+        "id": 1,
+        "title": "Ísland á að hætta aðildaviðræðum"
+      },
+      {
+        "id": 1,
+        "title": "Hvorugt lýsir afstöðu minni"
+      },
+      {
+        "id": 1,
+        "title": "Veit ekki"
+      },
+      {
+        "id": 1,
+        "title": "Vil ekki svara"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Hver eftirtalinna valmöguleika lýsir afstöðu þinni til aðildar Íslands að Evrópusambandinu best?",
+    "short": "Afstaða til aðildar Íslands að Evrópusambandinu",
+    "name": "esb",
+    "note": "",
+    "choices": [
+      {
+        "id": 1,
+        "title": "Hagsmunum Íslands er best borgið utan ESB"
+      },
+      {
+        "id": 1,
+        "title": "Hagsmunum Íslands er best borgið í ESB"
+      },
+      {
+        "id": 1,
+        "title": "Veit ekki"
+      },
+      {
+        "id": 1,
+        "title": "Vil ekki svara"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Hvaða gjaldmiðil á Ísland að nota til framtíðar?",
+    "short": "Hvaða gjaldmiðil á Ísland að nota?",
+    "name": "gjaldmidill",
+    "note": "",
+    "choices": [
+      {
+        "id": 1,
+        "title": "Íslenska krónu"
+      },
+      {
+        "id": 1,
+        "title": "Evru með ESB-aðild"
+      },
+      {
+        "id": 1,
+        "title": "Evru án ESB-aðildar"
+      },
+      {
+        "id": 1,
+        "title": "Norska krónu"
+      },
+      {
+        "id": 1,
+        "title": "Bandaríkjadal"
+      },
+      {
+        "id": 1,
+        "title": "Kanadadal"
+      },
+      {
+        "id": 1,
+        "title": "Annan gjaldmiðil"
+      },
+      {
+        "id": 1,
+        "title": "Veit ekki"
+      },
+      {
+        "id": 1,
+        "title": "Vil ekki svara"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að Ísland verði áfram aðili að NATÓ (Atlantshafsbandalaginu)?",
+    "short": "Ísland verði áfram aðili að NATÓ",
+    "name": "nato",
+    "note": "NATO er hernaðarbandalag vestrænna ríkja sem Ísland hefur átt aðild að frá stofnun þess, 1949.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Íslendingar ættu að veita fleiri pólitískum flóttamönnum hæli.",
+    "short": "Við ættum að veita fleiri pólitískum flóttamönnum hæli.",
+    "name": "flottamenn",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Viðhalda á núverandi tollum á innfluttar landbúnaðarvörur",
+    "short": "Viðhalda á tollum á innfluttar landbúnaðarvörur",
+    "name": "tollar",
+    "note": "Bændasamtök Íslands og ýmsir stjórnmálamenn krefjast þess að áfram verði heimilt að leggja tolla á innfluttar landbúnaðarafurðir þrátt fyrir að Ísland gangi í ESB. Slíkir tollar vernda íslenska framleiðendur en stuðla að hærra matvöruverði.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að með rýmri reglum verði erlendum ríkisborgurum gert auðveldara að setjast að á Íslandi?",
+    "short": "Innflytjendum verði gert auðveldara að setjast að á Íslandi",
+    "name": "erlendirrikisb",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ertu því að útlendingar geti keypt jarðir á Íslandi?",
+    "short": "Útlendingar geti keypt jarðir á Íslandi",
+    "name": "einkamal",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) því að gera íslenskukunnáttu að skilyrði fyrir veitingu ríkisborgararéttar?",
+    "short": "Íslenskukunnátta sé skilyrði fyrir veitingu ríkisborgararéttar",
+    "name": "islenskukunnatta",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Innflytjendur af fyrstu kynslóð geta aldrei aðlagast íslensku samfélagi fullkomlega.",
+    "short": "Innflytjendur af fyrstu kynslóð geta aldrei aðlagast samfélaginu fullkomlega.",
+    "name": "innflytjenduraffyrstu",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "title": "Íslenska ríkið niðurgreiðir sauðfjárframleiðslu um 4,7 milljarða króna árlega. Hver af eftirtöldum valmöguleikum lýsir afstöðu þinni til styrkjanna best?",
+    "short": "Árlegir styrkir til sauðfjárbænda eru 4,7 milljörðar kr.",
+    "name": "styrkir",
+    "note": "Styrkir til sauðfjárbænda nema, samkvæmt fjárlögum 2013, 4,7 milljörðum króna.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Styrkirnir eru alltof háir",
+        "weight": -2
+      },
+      {
+        "id": "2",
+        "title": "Styrkirnir eru of háir",
+        "weight": -1
+      },
+      {
+        "id": "3",
+        "title": "Styrkirnir eru hæfilegir",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Styrkirnir eru of lágir",
+        "weight": 1
+      },
+      {
+        "id": "5",
+        "title": "Styrkirnir eru alltof lágir",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "title": "Hver eftirtalinna valmöguleika lýsir afstöðu þinni til tekjuskatts á Íslandi?",
+    "short": "Afstaða til tekjuskatts",
+    "name": "skattar",
+    "note": "Skattprósenta á Íslandi er 37,32% af tekjum 0 - 241.475 krónum á mánuði, 40,22% af tekjum 241.476 - 739.509 krónum á mánuði og 46,22% af tekjum yfir 739.509 krónum á mánuði.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Skattbyrðin er alltof há",
+        "weight": -2
+      },
+      {
+        "id": "2",
+        "title": "Skattbyrðin er of há",
+        "weight": -1
+      },
+      {
+        "id": "3",
+        "title": "Skattbyrðin er hæfileg",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Skattbyrðin er of lág",
+        "weight": 1
+      },
+      {
+        "id": "5",
+        "title": "Skattbyrðin er alltof lág",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að ríkisreknir háskólar innheimti skólagjöld?",
+    "short": "Ríkisreknir háskólar innheimti skólagjöld",
+    "name": "skolagjold",
+    "note": "Innritunargjöld í Háskóla Íslands nema í dag 60.000 kr. á ári. Ríkið leggur skólanum til u.þ.b. 10 milljarða á ári.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Það á að leggja hærri tekjuskatt en þegar er gert á þá sem hafa hæstu launin.",
+    "short": "Hækka tekjuskatt þeirra sem hafa hæstu launin",
+    "name": "haestulaun",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Hver eftirtalinna valmöguleika lýsir afstöðu þinni til skattlagningar á eldsneyti best?",
+    "short": "Skattlagning á eldsneyti",
+    "name": "eldsneyti",
+    "note": "Íslenska ríkið leggur u.þ.b. 122 krónur á hvern lítra af eldsneyti.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Skattar eru alltof háir",
+        "weight": -2
+      },
+      {
+        "id": "2",
+        "title": "Skattar eru of háir",
+        "weight": -1
+      },
+      {
+        "id": "3",
+        "title": "Skattar eru hæfilegir",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Skattar eru of lágir",
+        "weight": 1
+      },
+      {
+        "id": "5",
+        "title": "Skattar eru alltof lágir",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að ríkissjóður greiði listamannalaun?",
+    "short": "Ríkissjóður greiði listamannalaun",
+    "name": "listamannalaun",
+    "note": "Íslenska ríkið greiðir laun nokkur hundruð listamanna í ár. Kostnaðurinn af því er um 506 milljónir króna á þessu ári - samkvæmt fjárlögum.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Eðlilegt er að nota hluta af skattfé ríkissjóðs til að koma í veg fyrir fólksfækkun á landsbyggðinni.",
+    "short": "Ráðstafa á hluta af skattfé til hindra fólksfækkun á landsbyggðinni",
+    "name": "folksfaekkun",
+    "note": "Hlutverk Byggðastofnunar er að vinna að eflingu byggðar og atvinnulífs á landsbyggðinni. Stofnunin fær 365,5 milljónir króna samkvæmt fjárlögum 2013.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að áfengi verði selt í matvöruverslunum?",
+    "short": "Áfengi verði selt í matvöruverslunum",
+    "name": "afengimatv",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "title": "Hversu hlynnt/ur eða andvíg/ur ertu því að ríkið haldi úti útvarpi og sjónvarpi með skattfé?",
+    "short": "Ríkið haldi úti útvarpi og sjónvarpi með skattfé",
+    "name": "rikisfjolmidill",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að svokallað lyklafrumvarp verði lögleitt?",
+    "short": "Lyklafrumvarp verði lögleitt",
+    "name": "lyklafrumvarp",
+    "note": "Svokallað lyklafrumvarp gerir lántakendum kleift að skila fasteignum til veðhafa án þess að lánveitandi geti gengið frekar að þeim fjárhagslega.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) því að fjárfestingabankar og viðskiptabankar verði aðskildir með lögum?",
+    "short": "Fjárfestingabankar og viðskiptabankar verði aðskildir með lögum",
+    "name": "adskildir",
+    "note": "Rætt hefur verið um að aðskilja viðskiptabanka og fjárfestingabanka þannig að þeir fyrrnefndu megi hvorki kaupa og selja eignarhluta í öðrum fyrirtækjum, né eiga og reka fjárfestingarsjóði.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Eðlilegt er að ríkissjóður styðji við listir og menningu sem ekki standa undir sér fjárhagslega.",
+    "short": "Eðlilegt er að ríkissjóður styðji við listir og menningu sem ekki standa undir sér fjárhagslega",
+    "name": "listirogmenning",
+    "note": "Fjölmörg söfn og menningarstofnanir á borð við Þjóðleikhúsið, Íslenska dansflokkinn og Sinfóníuhljómsveit Íslands eru rekin á fjárlögum.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "title": "Hversu sammála eða ósammála ertu eftirfarandi fullyrðingu: Afnema á verðtryggingu á neytendalánum í íslenskum krónum.",
+    "short": "Afnema á verðtryggingu á neytendalánum í krónum",
+    "name": "verdtrygging",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "title": "Hversu sammála eða ósammála ertu eftirfarandi fullyrðingu: Raunhæft er að ráðast í almennar niðurfærslur á skuldum einstaklinga.",
+    "short": "Raunhæft er að ráðast í almennar niðurfærslur á skuldum einstaklinga",
+    "name": "nidurfaerslur",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "title": "Grunnframfærsla hjá LÍN er 140.600 kr. á mánuði. Hver eftirtalinna valmöguleika lýsir afstöðu þinni til framfærslunnar best?",
+    "short": "Afstaða til grunnframfærslu hjá LÍN",
+    "name": "lin",
+    "note": "Framfærsla námsmanns í leigu- eða eigin húsnæði kallast grunnframfærsla. Námsmaður í foreldrahúsnæði eða leigulausu húsnæði fær 50% af grunnframfærslu. Hafi námsmaður barn/börn á framfæri undir 19 ára aldri er tekið tillit til þess.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Framfærslan er alltof há",
+        "weight": -2
+      },
+      {
+        "id": "2",
+        "title": "Framfærslan er of há",
+        "weight": -1
+      },
+      {
+        "id": "3",
+        "title": "Framfærslan er hæfileg",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Framfærslan er of lág",
+        "weight": 1
+      },
+      {
+        "id": "5",
+        "title": "Framfærslan er alltof lág",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "title": "Hver af eftirtöldum valmöguleikum lýsir afstöðu þinni til upphæðar örorkubóta best?",
+    "short": "Afstaða til upphæðar örorkubóta",
+    "name": "ororkubaetur",
+    "note": "Lágmarkslífeyrir einstæðs foreldris með eitt barn var 203.005 krónur á síðasta ári, svo dæmi sé tekið.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Bætur eru alltof háar",
+        "weight": -2
+      },
+      {
+        "id": "2",
+        "title": "Bætur eru of háar",
+        "weight": -1
+      },
+      {
+        "id": "3",
+        "title": "Bætur eru hæfilegar",
+        "weight": -0
+      },
+      {
+        "id": "4",
+        "title": "Bætur eru of lágar",
+        "weight": 1
+      },
+      {
+        "id": "5",
+        "title": "Bætur eru alltof lágar",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "title": "Hver af eftirtöldum valmöguleikum lýsir afstöðu þinni til upphæðar atvinnuleysisbóta best?",
+    "short": "Afstaða til upphæðar atvinnuleysisbóta",
+    "name": "atvinnuleysisb",
+    "note": "Grunnatvinnuleysisbætur eru 172.609 kr. á mánuði (miðað við 100% bótarétt).",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Bætur eru alltof háar",
+        "weight": -2
+      },
+      {
+        "id": "2",
+        "title": "Bætur eru of háar",
+        "weight": -1
+      },
+      {
+        "id": "3",
+        "title": "Bætur eru hæfilegar",
+        "weight": -0
+      },
+      {
+        "id": "4",
+        "title": "Bætur eru of lágar",
+        "weight": 1
+      },
+      {
+        "id": "5",
+        "title": "Bætur eru alltof lágar",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "title": "Hvað af eftirfarandi lýsir afstöðu þinni til dóma sem felldir hafa verið í kynferðisbrotamálum á undanförnum árum?",
+    "short": "Afstaða til dóma í nýlegum kynferðisbrotamálum",
+    "name": "kynferdisbrot",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Alltof þungir",
+        "weight": -2
+      },
+      {
+        "id": "2",
+        "title": "Of þungir",
+        "weight": -1
+      },
+      {
+        "id": "3",
+        "title": "Hæfilegir",
+        "weight": -0
+      },
+      {
+        "id": "4",
+        "title": "Of vægir",
+        "weight": 1
+      },
+      {
+        "id": "5",
+        "title": "Alltof vægir",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) því að listi yfir nöfn og heimilisföng dæmdra barnaníðinga verði gerður aðgengilegur almenningi?",
+    "short": "Listi yfir dæmda barnaníðinga verði aðgengilegur almenningi",
+    "name": "barnanidingar",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) lögleiðingu kannabisefna?",
+    "short": "Lögleiðing kannabisefna",
+    "name": "kannabis",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) banni á sölu tóbaks á Íslandi?",
+    "short": "Bann á sölu tóbaks á Íslandi",
+    "name": "tobak",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú núgildandi kvótakerfi?",
+    "short": "Afstaða til núgildandi kvótakerfis",
+    "name": "kvotakerfi",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi skilgreiningu á þjóðareign auðlinda: Til þjóðareignar teljast nytjastofnar og aðrar auðlindir hafs og hafsbotns innan íslenskrar lögsögu utan netlaga, vatn og önnur þau náttúrugæði sem ekki eru háð einkaeignarrétti, svo sem vatnsafl, jarðhiti og jarðefni í þjóðlendum.",
+    "short": "Skilgreining Stjórnlagaráðs á þjóðareign auðlinda",
+    "name": "tjodareign",
+    "note": "Þetta er sú skilgreining á auðlind sem finna má í stjórnarskrárfrumvarpinu sem stjórnskipunar- og eftirlitsnefnd afgreiddi á kjörtímabilinu á grunni tillagna stjórnlagaráðs. Deilt hefur verið um skilgreiningu á hugtakinu.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Nýtingarréttur á auðlindum verður að vera til langs tíma til að tryggja rekstraröryggi þeirra fyrirtækja sem nýta þær.",
+    "short": "Nýtingarréttur á auðlindum verður að vera til langs tíma til að tryggja rekstraröryggi þeirra sem nýta þær",
+    "name": "nytingarrettur",
+    "note": "Í frumvarpi að nýrri stjórnarskrá sem lagt var fram á kjörtímabilinu var kveðið á um að auðlindir sem ekki eru þegar í einkaeign skuli vera í ævarandi eign þjóðarinnar. Kvótaeigendur og handhafar nýtingarréttar á auðlindum vilja að samningstími um nýtingarréttinn verði sem lengstur svo hægt sé að tryggja rekstraröryggi.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "title": "Til hve langs tíma á að hámarki að semja um nýtingarrétt á jarðvarma?",
+    "short": "Hámarks samningstími nýtingarréttar á jarðvarma",
+    "name": "jardvarmi",
+    "note": "",
+    "choices": [
+      {
+        "id": 1,
+        "title": "Skemur en 10 ár"
+      },
+      {
+        "id": 1,
+        "title": "10 ára"
+      },
+      {
+        "id": 1,
+        "title": "20 ára"
+      },
+      {
+        "id": 1,
+        "title": "30 ára"
+      },
+      {
+        "id": 1,
+        "title": "40 ára"
+      },
+      {
+        "id": 1,
+        "title": "50 ára"
+      },
+      {
+        "id": 1,
+        "title": "60 ára"
+      },
+      {
+        "id": 1,
+        "title": "Lengur en 60 ára"
+      },
+      {
+        "id": 1,
+        "title": "Vil ekki svara"
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) því að strandveiðar megi stunda án aflaheimilda?",
+    "short": "Strandveiðar megi stunda án aflaheimilda",
+    "name": "aflaheimildir",
+    "note": "Samkvæmt slíkum hugmyndum þurfa þeir sem stunda strandveiðar ekki að eiga aflaheimildir.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) því að Alþingi líti á niðurstöður stjórnlagaráðs sem bindandi?",
+    "short": "Alþingi líti á niðurstöður stjórnlagaráðs sem bindandi",
+    "name": "stjornlagarad",
+    "note": "Frumvarp stjórnlagaráðs til stjórnarskrár er aðeins ráðgefandi en Alþingi fékk frumvarpið til meðferðar á kjörtímabilinu.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "title": "Ert þú hlynnt(ur) eða andvíg(ur) persónukjöri?",
+    "short": "Afstaða til persónukjörs",
+    "name": "personukjor",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að landið verði eitt kjördæmi?",
+    "short": "Landið verði eitt kjördæmi",
+    "name": "kjordaemi",
+    "note": "Samkvæmt núgildandi kjördæmaskipan er landinu skipt í sex kjördæmi. Frambjóðendur bjóða sig fram í tilteknu kjördæmi. Þetta hefur í för með sér að vægi atkvæði á milli kjördæma er ójafnt.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að réttur almennings til upplýsinga sem varða almannahag verði tryggður í stjórnarskrá?",
+    "short": "Réttur til upplýsinga sem varða almannahag í stjórnarskrá",
+    "name": "upplysinga",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að ráðherrar sitji á Alþingi?",
+    "short": "Ráðherrar sitji á Alþingi",
+    "name": "radherrar",
+    "note": "Samkvæmt núgildandi fyrirkomulagi eru ráðherrar einnig þingmenn. Breytingar hefðu í för með sér skýrari aðskilnað á milli framkvæmdavalds og löggjafarvalds.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "46",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Fólk á að geta borgað sérstaklega fyrir aðgang að betri heilbrigðisþjónustu.",
+    "short": "Fólk á að geta borgað sérstaklega fyrir aðgang að betri heilbrigðisþjónustu.",
+    "name": "betriheilbr",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "47",
+    "title": "Hversu mikilvægt telur þú að þjónusta sálfræðinga sé inni í sjúkratryggingakerfinu?",
+    "short": "Þjónusta sálfræðinga verði hluti af sjúkratryggingakerfinu",
+    "name": "salfraedingarsjukra",
+    "note": "Í dag er þjónusta sálfræðinga ekki inni í sjúkratryggingakerfinu öfugt við þjónustu t.d. lækna.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög mikilvægt",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Mikilvægt",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ekki mikilvægt",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Alls ekki mikilvægt",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "48",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að tannlækningar verði hluti af sjúkratryggingakerfinu?",
+    "short": "Tannlækningar verði hluti af sjúkratryggingakerfinu",
+    "name": "tannlaekningarsjukra",
+    "note": "Í dag er þjónusta tannlækna ekki inni í sjúkratryggingakerfinu öfugt við þjónustu t.d. lækna.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "49",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að ríkið feli einkaaðilum rekstur heilbrigðisstofnana í hagnaðarskyni?",
+    "short": "Ríkið feli einkaaðilum rekstur heilbrigðisstofnana í hagnaðarskyni",
+    "name": "heilbrstofnanir",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "50",
+    "title": "Hversu sammála eða ósammála ertu eftirfarandi fullyrðingu: Íslendingar búa við jafnrétti þar sem konur og karlar búa við jafna stöðu og tækifæri.",
+    "short": "Konur og karlar búa við jafna stöðu og tækifæri",
+    "name": "jafnrettur",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "51",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að heimila staðgöngumæðrun á Íslandi?",
+    "short": "Heimila á staðgöngumæðrun á Íslandi",
+    "name": "stadgongumaedrun",
+    "note": "Staðgöngumóðir fer í glasafrjóvgun þar sem notaðir eru fósturvísar sem eru líffræðilega ekki hennar eigin.  Egg og sæði eru frá framtíðar foreldrum barnsins og er það algengasta tegund staðgöngumæðrunar. (stadganga.is)",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "52",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að heimilt sé að selja vændi á Íslandi?",
+    "short": "Heimilt sé að selja vændi á Íslandi",
+    "name": "vaendi",
+    "note": "Samkvæmt lögum er bannað að kaupa vændi á Íslandi en heimilt að selja það, svo lengi sem þriðji aðili hagnist ekki á viðskiptunum. Þannig liggur refsiábyrgð vændisins hjá kaupandanum.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "53",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Hjálparstarf í öðrum löndum ætti frekar að fjármagna með skattfé en söfnunarfé.",
+    "short": "Hjálparstarf í öðrum löndum ætti frekar að fjármagna með skattfé en söfnunarfé",
+    "name": "hjalparstarf",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "54",
+    "title": "Hver af eftirtöldum valmöguleikum lýsir afstöðu þinni til Reykjavíkurflugvallar best?",
+    "short": "Afstaða til Reykjavíkurflugvallar",
+    "name": "flugvollurinn",
+    "note": "",
+    "choices": [
+      {
+        "id": 1,
+        "title": "Flugvöllurinn á að vera áfram í Vatnsmýri"
+      },
+      {
+        "id": 1,
+        "title": "Það á að byggja nýjan flugvöll í nágrenni Reykjavíkur"
+      },
+      {
+        "id": 1,
+        "title": "Innanlandsflug til Reykjavíkur fari um Keflavíkurflugvöll"
+      },
+      {
+        "id": 1,
+        "title": "Annað"
+      },
+      {
+        "id": 1,
+        "title": "Veit ekki"
+      },
+      {
+        "id": 1,
+        "title": "Vil ekki svara"
+      }
+    ]
+  },
+  {
+    "id": "55",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að vegtollar verði lagðir á stofnbrautir til að fjármagna vegaframkvæmdir?",
+    "short": "Vegtollar verði lagðir á stofnbrautir til að fjármagna vegaframkvæmdir",
+    "name": "vegtollar",
+    "note": "Rætt hefur verið um að breyta tekjuöflun í samgöngumálum þannig að notendagjöld komi að einhverju leyti í stað bensín- og olíugjalda. Notendagjöldin yrðu innheimt með tollhliðum á stofnbrautum, til dæmis umhverfis höfuðborgarsvæðið.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "56",
+    "title": "Hversu mikilvægt telur þú að Vaðlaheiðargöng verði byggð?",
+    "short": "Vaðlaheiðargöng verði byggð",
+    "name": "vadlaheidagong",
+    "note": "Vaðlaheiðargöng eiga að bæta samgöngur milli Eyjafjarðar og Fnjóskadals, en Víkurskarð er gjarnan farartálmi á veturna. Áætlaður kostnaður er rúmir 10 milljarðar króna.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög mikilvægt",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Mikilvægt",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ekki mikilvægt",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Alls ekki mikilvægt",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Veit ekki",
+        "weight": null
+      },
+      {
+        "id": "7",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "57",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Réttlætanlegt er að gera tilraunir á dýrum ef það er í þágu framfara í læknavísindum.",
+    "short": "Réttlætanlegt er að gera tilraunir á dýrum í þágu framfara í læknavísindum.",
+    "name": "tilrauniradyrum",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "58",
+    "title": "Hvort telur þú mikilvægara eða hafa hemil á verðbólgu eða atvinnuleysi?",
+    "short": "Hvort er mikilvægara að hafa hemil á verðbólgu eða atvinnuleysi?",
+    "name": "verdbolgaatvinnuleysi",
+    "note": "",
+    "choices": [
+      {
+        "id": 1,
+        "title": "Verðbólgu"
+      },
+      {
+        "id": 1,
+        "title": "Atvinnuleysi"
+      },
+      {
+        "id": 1,
+        "title": "Veit ekki"
+      },
+      {
+        "id": 1,
+        "title": "Vil ekki svara"
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Því frjálsari sem markaðurinn er því frjálsara er fólk.",
+    "short": "Því frjálsari sem markaðurinn er því frjálsara er fólk.",
+    "name": "frjalsmarkadur",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "60",
+    "title": "Hversu sammála eða ósammála ertu eftirfarandi fullyrðingu: Kaupsýslumenn og framleiðendur eru mikilvægari samfélaginu en rithöfundar og listamenn.",
+    "short": "Kaupsýslumenn og framleiðendur eru mikilvægari samfélaginu en rithöfundar og listamenn.",
+    "name": "kaupsyslumenn",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "61",
+    "title": "Hversu sammála eða ósammála ertu eftirfarandi fullyrðingu: Enginn ræður því hvar hann fæðist svo það er kjánalegt að vera stoltur af föðurlandinu.",
+    "short": "Enginn ræður því hvar hann fæðist svo það er kjánalegt að vera stoltur af föðurlandinu",
+    "name": "fodurlandinu",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "62",
+    "title": "Hversu sammála eða ósammála ertu eftirfarandi fullyrðingu: Þegar upp er staðið skiptist fólk frekar eftir stétt en þjóðerni.",
+    "short": "Fólk skiptist frekar eftir stétt en þjóðerni",
+    "name": "skiptiststett",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "63",
+    "title": "Hversu sammála eða ósammála ertu eftirfarandi fullyrðingu: Góðir foreldrar þurfa stundum að flengja börnin sín.",
+    "short": "Góðir foreldrar þurfa stundum að flengja börnin sín",
+    "name": "flengjaborn",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "64",
+    "title": "Hversu hlynnt(ur) eða andvíg(ur) ert þú því að á Íslandi sé þjóðkirkja?",
+    "short": "Á Íslandi sé þjóðkirkja",
+    "name": "thjodkirkja",
+    "note": "Samkvæmt stjórnarskrá er hin evangelíska-lútherska þjóðkirkja á Íslandi. Samkvæmt fjárlögum nema fjárframlög ríkisins 1,4 milljörðum króna á þessu ári.",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög hlynnt(ur)",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Frekar hlynnt(ur)",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hlutlaus",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Frekar andvíg(ur)",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög andvíg(ur)",
+        "weight": -2
+      },
+      {
+        "id": "6",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "65",
+    "title": "Hversu sammála eða ósammála ert þú eftirfarandi fullyrðingu: Það er mikilvægt að trúarbragðafræði sé kennd í grunnskólum?",
+    "short": "Það er mikilvægt að trúarbragðafræði sé kennd í grunnskólum",
+    "name": "truarbragdafraedi",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "66",
+    "title": "Hversu sammála eða ósammála ertu eftirfarandi fullyrðingu: Bænahald á ekki að vera leyft í starfi leik- og grunnskóla.",
+    "short": "Bænahald á ekki að vera leyft í starfi leik- og grunnskólaå",
+    "name": "baenahald",
+    "note": "",
+    "choices": [
+      {
+        "id": "1",
+        "title": "Mjög sammála",
+        "weight": 2
+      },
+      {
+        "id": "2",
+        "title": "Sammála",
+        "weight": 1
+      },
+      {
+        "id": "3",
+        "title": "Hvorki né",
+        "weight": 0
+      },
+      {
+        "id": "4",
+        "title": "Ósammála",
+        "weight": -1
+      },
+      {
+        "id": "5",
+        "title": "Mjög ósammála",
+        "weight": -2
+      },
+      {
+        "id": "5",
+        "title": "Vil ekki svara",
+        "weight": null
+      }
+    ]
+  }
+]
