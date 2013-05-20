@@ -1,0 +1,443 @@
+{% extends "bootstrap_responsive-viz2.html" %}
+
+{% block body_content %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Kosningapróf DV í boði gogn.in</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Upphafssíða</a></li>
+              <li><a href="/um">Um</a></li>
+              <li><a href="/myndraen-samantekt">Myndræn samantekt</a></li>
+              <li><a href="/politiskur-as">Pólitískur ás</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+
+        <form id="controls" class="form-inline"><div class="section"></div></form>
+
+        <div id="chart">
+          <div id="viz" class="section"></div>
+        </div>
+        <noscript><strong>Þetta gerir ekkert án JavaScript.</strong></noscript>
+		<p><div class="fb-like" data-href="http://x13.gogn.in/" data-send="true" data-width="450" data-show-faces="false"></div></p>
+        <div id="info" class="section">
+          <p>Reynt er hér að giska á staðsetningu hvers frambjóðanda á
+          <a href="http://en.wikipedia.org/wiki/Political_compass">pólitíska rófinu</a>
+          með því að reikna samtölur byggðar á völdum svörum úr
+          <a href="http://gogn.in/2013/04/15/kosningaprof-dv/">DV könnuninni</a>.
+          Þótt reikningurinn séu ansi hæpnar ágiskanir er þó sama formúla notuð fyrir
+          alla frambjóðendur og því gefur þetta áhugaverða leið til þess að bera afstöðu
+          frambjóðenda saman.</p>
+        </div>
+
+
+        <script>
+        (function ($) {
+
+          var party_colors = {
+            "Alþýðufylkingin": "#bcbd22",
+            "Björt framtíð": "#9467bd",
+            "Dögun": "#ff7f0e",
+            "Flokkur heimilanna": "#c5b0d5",
+            "Framsóknarflokkurinn": "#2ca02c",
+            "Hægri Grænir": "#17becf",
+            "Húmanistaflokkurinn": "#c49c94",
+            "Landsbyggðarflokkurinn": "#ffbb78",
+            "Lýðræðisvaktin": "#8c564b",
+            "Píratar": "#7f7f7f",
+            "Regnboginn": "#e377c2",
+            "Samfylkingin": "#d62728",
+            "Sjálfstæðisflokkurinn": "#1f77b4",
+            "Vinstri græn": "#98df8a"
+          };
+
+          var party_id = {
+            "Alþýðufylkingin": "r",
+            "Björt framtíð": "a",
+            "Dögun": "t",
+            "Flokkur heimilanna": "i",
+            "Framsóknarflokkurinn": "b",
+            "Hægri Grænir": "g",
+            "Húmanistaflokkurinn": "h",
+            "Landsbyggðarflokkurinn": "m",
+            "Lýðræðisvaktin": "l",
+            "Píratar": "þ",
+            "Regnboginn": "j",
+            "Samfylkingin": "s",
+            "Sjálfstæðisflokkurinn": "d",
+            "Vinstri græn": "v"
+          };
+
+          // - is LEFT ** + is RIGHT
+          var left_to_right = {
+            _: 1
+          , tannlaekningarsjukra: -1
+          , salfraedingarsjukra: -1
+          , betriheilbr: 2.5
+          , listirogmenning: -.3
+          , lin: -.5
+          , ororkubaetur: -1
+          , atvinnuleysisb: 1.5
+          , hjalparstarf: .5
+          , frjalsmarkadur: -.4
+          , rikisfjolmidill: -1
+          , mengunarv: -.2
+          , tollar: .5
+          , skolagjold: 2
+          , flottamenn: -.5
+          //, skiptiststett: -.2
+          };
+
+          // - is AUTH ** + is LIB
+          var auth_to_lib = {
+            _: 1
+          , vaendi: .4
+          , frjalsmarkadur: 2
+          , adskildir: .5
+          , kannabis: .7
+          , tobak: -1
+          , aflaheimildir: 1
+          , betriheilbr: .2
+          , heilbrstofnanir: .5
+          , stadgongumaedrun: 1
+          , tollar: .3
+          };
+
+          function precalc_axis ( data ) {
+
+            data.max_x = 0;
+            data.max_y = 0;
+
+            // calculate candidates placement
+            data.population.forEach(function ( cand ) {
+
+              cand._color = party_colors[ cand.party ];
+
+              if ( !cand._answered ) {
+                return;
+              }
+
+              var l2r = [];
+              var a2l = [];
+              data.questions.forEach(function ( q ) {
+
+                var qid = q.id;
+                var answer = cand[ qid ];
+
+                answer = q.choices.filter(function ( opt ) {
+                  return opt.title === answer;
+                })[0];
+
+                if ( !answer ) {
+                  return;
+                }
+
+                // answer has weights
+                if ( answer.weight != null ) {
+                  var x = 0;
+
+                  // measure on the left-to-right spectrum
+                  if ( qid in left_to_right ) {
+                    l2r.push( answer.weight * left_to_right[ qid ] );
+                    x++;
+                  }
+                  // measure on the authoritarian-to-libertarian spectrum
+                  if ( qid in auth_to_lib ) {
+                    a2l.push( answer.weight * auth_to_lib[ qid ] );
+                    x++;
+                  }
+
+                  if ( !x && !q.seen ) {
+                    // ;;;console.log( qid, q.short );
+                    q.seen = true;
+                  }
+                }
+
+              });
+
+              cand.axis_l2r = pv.mean( l2r.length ? l2r : [ 0 ] );
+              cand.axis_a2l = pv.mean( a2l.length ? a2l : [ 0 ] );
+
+              if ( Math.abs(cand.axis_l2r) > data.max_x ) {
+                data.max_x = Math.abs(cand.axis_l2r);
+              }
+              if ( Math.abs(cand.axis_a2l) > data.max_y ) {
+                data.max_y = Math.abs(cand.axis_a2l);
+              }
+
+            });
+
+          }
+
+
+          function visualize ( data ) {
+
+            var w = 720
+              , h = 450
+              , x = pv.Scale.linear( -data.max_x - .2, data.max_x + .2 ).nice().range( 0, w )
+              , y = pv.Scale.linear( -data.max_y - .2, data.max_y + .2 ).nice().range( 0, h )
+              ;
+
+            var vis = new pv.Panel()
+                .canvas( $( '#viz' )[0] )
+                .width(w)
+                .height(h)
+                .left(0)
+                .right(0)
+                .top(50)
+                .bottom(30)
+                .events( 'all' )
+                .event( 'mousemove', pv.Behavior.point() )
+                ;
+
+            vis.add( pv.Rule )
+                .strokeStyle( '#ccc' )
+                .lineDash([ 2, 2 ])
+                .bottom( h / 2 )
+                ;
+            vis.add( pv.Rule )
+                .strokeStyle( '#ccc' )
+                .lineDash([ 2, 2 ])
+                .left( w / 2 )
+                ;
+
+            vis.add( pv.Label )
+                .bottom( 0 )
+                .text( 'Frjálshyggja' )
+                .textAlign( 'center' )
+                .textBaseline( 'top' )
+                .font( '12px sans-serif' )
+                ;
+            vis.add( pv.Label )
+                .top( 0 )
+                .text( 'Forsjárhyggja' )
+                .textAlign( 'center' )
+                .font( '12px sans-serif' )
+                ;
+            vis.add( pv.Label )
+                .left( 0 )
+                .text( 'Vinstri' )
+                .textAlign( 'left' )
+                .font( '12px sans-serif' )
+                ;
+            vis.add( pv.Label )
+                .right( 0 )
+                .text( 'Hægri' )
+                .textAlign( 'right' )
+                .font( '12px sans-serif' )
+                ;
+
+            var current_target = null;
+
+            var plot = vis.add( pv.Dot )
+                .data( data.table )
+                .bottom(0)
+                .left(function( d ){
+                  return x( d.axis_l2r );
+                })
+                .top(function( d ){
+                  return y( d.axis_a2l );
+                })
+                .fillStyle(function ( d ) {
+                  var c = pv.color( d._color );
+                  var o = ( current_target ) ? ( current_target === d ? .5 : .2 ) : .2;
+                  return pv.rgb( c.r, c.g, c.b, o );
+                })
+                .strokeStyle(function ( d ) {
+                  var c = pv.color( d._color );
+                  var o = ( current_target ) ? ( current_target === d ?  1 : .2 ) :  1;
+                  return pv.rgb( c.r, c.g, c.b, o );
+                })
+                .lineWidth(1.4)
+                .event('point', function ( d ) {
+                  current_target = d;
+                  return vis;
+                })
+                .event('unpoint', function ( d ) {
+                  current_target = null;
+                  return vis;
+                })
+                ;
+
+            var hover = vis.add( pv.Panel )
+                .data([ true ])
+                .bottom( 0 )
+                .visible(function(){ return current_target; })
+                .left(function( d ){
+                  return x( current_target.axis_l2r ) + 10;
+                })
+                .top(function( d ){
+                  return y( current_target.axis_a2l ) - 10;
+                })
+                .height( 53 )
+                .width( 210 )
+                .fillStyle( "rgba(255,255,255,.8)" )
+                .strokeStyle(function () {
+                  var c = pv.color( current_target._color );
+                  return pv.rgb( c.r, c.g, c.b, 1 );
+                })
+                .lineWidth( 1 )
+                .antialias( false )
+              .add( pv.Label )
+                  .data( pv.range( 3 ) )
+                  .left( 4 )
+                  .font(function () {
+                    return ( !this.index ? 'bold ' : '' ) + '12px' + ' sans-serif';
+                  })
+                  .top(function () {
+                    return this.index * 14 + 20;
+                  })
+                  .text(function () {
+                    return [ current_target.name
+                           , current_target.party
+                           , current_target.seat + '.  ' + current_target.locale
+                           ][ this.index ];
+                  })
+                ;
+
+            vis.add( pv.Label )
+                .top( -25 )
+                .font( '20px sans-serif' )
+                .textAlign( 'center' )
+                .textBaseline( 'bottom' )
+                .text( 'Dreifing frambjóðenda á pólitíska rófinu' )
+                ;
+
+            vis.render();
+
+          }
+
+
+
+          $.ajax({
+            'url': '/data/data.json',
+            'dataType': 'json',
+          })
+          .success(function ( data ) {
+
+            precalc_axis( data );
+
+            var defaults = {
+              'Framsóknarflokkurinn': 1
+            , 'Sjálfstæðisflokkurinn': 1
+            , 'Samfylkingin': 1
+            , 'Björt framtíð': 1
+            , 'Vinstri græn': 1
+            , 'Píratar': 1
+            }
+
+            var parties = pv.uniq(
+                data.population.map(function(c){
+                  return c.party;
+                })
+              )
+              .sort()
+              ;
+            var form = $( '#controls > div' );
+            parties
+              .forEach(function ( p ) {
+                var pid = party_id[ p ]
+                var c = pv.color( party_colors[ p ] || '#ccc' );
+                $([
+                  '<label>\n',
+                  '<input type="checkbox" value="on" name="party"',
+                  ' id="', pid ,'"',
+                  ' data-party="', p ,'"',
+                  // ( defaults[ p ] ? ' checked' : '' ),
+                  ' />\n',
+                  p,
+                  ' <span class="dot" style="',
+                  'background-color:rgba(',[ c.r, c.g, c.b ].join(','), ',.2);',
+                  'border-color:rgba(',[ c.r, c.g, c.b ].join(','),',1);',
+                  '"></span>',
+                  '</label>'
+                ].join('')).appendTo( form );
+              })
+              ;
+
+            $( '#controls' )
+              .apply_query( location.hash.replace( /^#/, '' ) || 'a=on&b=on&%C3%BE=on&s=on&d=on&v=on' )
+              .on( 'change', function () {
+                var filt_p = {};
+
+                var state = $( '#controls' ).to_query();
+                location.hash = state;
+
+                $( 'input[name=party]' )
+                  .each(function ( f ) {
+                    filt_p[ this.getAttribute('data-party') ] = this.checked;
+                  })
+                  ;
+                data.table = data.population
+                  .filter(function ( cand ) {
+                    return cand._answered && filt_p[ cand.party ];
+                  })
+                  ;
+                visualize( data );
+              })
+              .trigger( 'change' )
+              ;
+
+          })
+          ;
+
+
+        })(jQuery);
+        </script>
+<p style="border-top:1px dotted #ccc;max-width:400px;margin:80px auto;padding:4px;font-size:10px;">
+  <a href="https://github.com/borgar">borgar</a> fyrir <a href="http://gogn.in">gogn.in</a>
+</p>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31101018-1']);
+  _gaq.push(['_setDomainName', 'gogn.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+      </div>
+      </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31101018-1']);
+  _gaq.push(['_setDomainName', 'gogn.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% endblock %}

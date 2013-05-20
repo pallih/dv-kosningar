@@ -1,0 +1,377 @@
+{% extends "bootstrap_responsive-viz.html" %}
+
+{% block body_content %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+   <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Kosningapróf DV í boði gogn.in</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Upphafssíða</a></li>
+              <li><a href="/um">Um</a></li>
+              <li><a href="/myndraen-samantekt">Myndræn samantekt</a></li>
+              <li><a href="/politiskur-as">Pólitískur ás</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+
+
+        <form id="controls" class="form-inline"><div class="section">
+
+          <label>
+            Sýna spurningu:
+            <select id="sq" name="sq">
+              <option value=""></option>
+            </select>
+          </label>
+
+          &mdash;
+
+          <label>
+            En bara þá sem svöruðu
+            <select id="fq" name="fq">
+              <option value="">Hverju sem er</option>
+            </select>
+
+            með
+
+            <select id="fa" name="fa">
+              <option value="">Hverju sem er</option>
+            </select>
+          </label>
+
+        </div></form>
+
+        <div id="chart">
+          <div id="viz" class="section"></div>
+        </div>
+        <noscript><strong>Þetta gerir ekkert án JavaScript.</strong></noscript>
+		<p><div class="fb-like" data-href="http://x13.gogn.in/" data-send="true" data-width="450" data-show-faces="false"></div></p>
+        <div id="info" class="section">
+          <p>Reynt er hér að skera gögnin úr <a href="http://gogn.in/2013/04/15/kosningaprof-dv/">könnun DV</a>
+          eftir einni eða tveimur spurningum í einu. T.d. er hægt að sjá:</p>
+          <ul>
+            <li><a class="preset" href="#sq=verdtrygging">Svör um afnám verðtryggingar á neytendalánum</a></li>
+            <li><a class="preset" href="#sq=verdtrygging&amp;fq=party&amp;fa=10">Svör um afnám verðtryggingar frá frambjóðendum Pírata</a></li>
+            <li><a class="preset" href="#sq=party&amp;fq=locale&amp;fa=3">Hvaða frambjóðendur hafa svarað í Reykjavík norður</a></li>
+            <li><a class="preset" href="#sq=party&amp;fq=einkamal">Hvaða flokkar eru mjög andvígir því að útlendingar geti keypt jarðir</a></li>
+          </ul>
+
+         </p>
+        </div>
+
+
+        <script>
+        (function ($) {
+
+          $.ajax({
+            'url': '/data/data.json',
+            'dataType': 'json',
+          })
+          .success(function ( data ) {
+
+            var questions = data.questions;
+            var sq = $( '#sq' );
+            var fq = $( '#fq' );
+
+            questions
+              .forEach(function ( q ) {
+                sq.append( new Option( q.short || q.title, q.id ) );
+                fq.append( new Option( q.short || q.title, q.id ) );
+              })
+              ;
+            sq.val( 'eldsneyti' );
+            fq.val( 'locale' );
+
+            fq.on( 'change', function ( e ) {
+                e.preventDefault();
+
+                var fa = $( '#fa' ).empty();
+                fa.append( new Option( 'Hverju sem er', '' ) );
+
+                if ( !this.value ) {
+                  fa.attr('disabled', true);
+                  return;
+                }
+                fa.removeAttr('disabled');
+
+                // find the filter question
+                var q = data.questions.filter(function ( q ) {
+                  return q.id === this.value;
+                }, this)[ 0 ];
+
+                tally = q.choices.forEach(function ( choice ) {
+                  fa.append( new Option( choice.title, choice.id ) );
+                });
+
+              })
+              .trigger( 'change' )
+              ;
+
+          // dumb, but answer filter won't be ready until after we apply the values
+          var initvalues = location.hash.replace( /^#/, '' ) || 'sq=helguvik&fq=nato&fa=Hlutlaus';
+          $( '#controls' ).apply_query( initvalues );
+          fq.trigger( 'change' );
+          $( '#controls' ).apply_query( initvalues );
+
+
+
+          $( '#controls' )
+            .on( 'change', function ( e ) {
+
+              var split_q  = $( '#sq' ).val();
+              var filter_q = $( '#fq' ).val();
+              var filter_a, _filter_a = $( '#fa' ).val();
+
+              location.hash = $( this ).to_query();
+
+              // find the split question
+              var q = data.questions.filter(function ( q ) {
+                return q.id === split_q;
+              })[ 0 ];
+              // find the filter question
+              var fq = data.questions.filter(function ( q ) {
+                return q.id === filter_q;
+              })[ 0 ];
+
+              if ( fq ) {
+                for (var fqi=0,fql=fq.choices.length; fqi<fql; fqi++) {
+                  if ( fq.choices[fqi].id === _filter_a ) {
+                    filter_a = fq.choices[fqi].title;
+                    break;
+                  }
+                }
+              }
+
+              // find respondents
+              var responses = data.population.filter(function ( cand ) {
+                // question
+                if ( !cand._answered ) {
+                  return false;
+                }
+                if ( filter_q && filter_a && cand[ filter_q ] !== filter_a ) {
+                  return false;
+                }
+                return true;
+              });
+
+              // split by question
+              var tally = {};
+              responses.forEach(function ( cand ) {
+                var value = cand[ q.id ];
+                if ( !tally[ value ] ) {
+                  tally[ value ] = [ cand ];
+                }
+                else {
+                  tally[ value ].push( cand );
+                }
+              });
+              tally = q.choices.map(function ( choice ) {
+                return tally[ choice.title ] || [];
+              });
+
+              data.population_size = responses.length;
+              data.active_question = q;
+              data.filter_question = fq || null;
+              data.filter_answer = filter_a || null;
+              data.table = tally;
+
+              visualize( data );
+
+            })
+            .trigger( 'change' )
+            ;
+
+          })
+          ;
+
+          $( '#info' ).on( 'click', 'a.preset', function () {
+            var preset = this.href.replace( /^.*#/, '' );
+            $( '#controls' ).apply_query( preset );
+            $( '#fq' ).trigger( 'change' );
+            $( '#controls' ).apply_query( preset ).trigger( 'change' );
+          });
+
+          function visualize ( data ) {
+
+            var w = 820
+              , h = 420
+              // , x = pv.Scale.ordinal( pv.range(data.table.length) ).splitFlush( 0, w )
+              , x = pv.Scale.ordinal( pv.range(data.table.length) ).splitBanded( 0, w, 4/5 )
+              , y = pv.Scale.linear(0, pv.max(data.table, function(d) { return d.length })).range(0, h)
+              ;
+
+            // The root panel.
+            var vis = new pv.Panel()
+                .canvas( $('#viz')[0] )
+                .width(w)
+                .height(h)
+                .left(30)
+                .right(30)
+                .top(50)
+                .bottom(30)
+                ;
+
+            vis.add(pv.Rule)
+                .data(y.ticks(5))
+                .bottom(y)
+                .strokeStyle("#ccc")
+                .lineDash([ 3, 3 ])
+              .anchor("left").add(pv.Label)
+                .text(y.tickFormat)
+                ;
+
+            var active_choices = data.active_question.choices;
+            var colorFn = '#1f77b4';
+            if ( data.active_question.id === 'party' ) {
+              var party_colors = {
+                "Alþýðufylkingin": "#bcbd22",
+                "Björt framtíð": "#9467bd",
+                "Dögun": "#ff7f0e",
+                "Flokkur heimilanna": "#c5b0d5",
+                "Framsóknarflokkurinn": "#2ca02c",
+                "Hægri Grænir": "#17becf",
+                "Húmanistaflokkurinn": "#c49c94",
+                "Landsbyggðarflokkurinn": "#ffbb78",
+                "Lýðræðisvaktin": "#8c564b",
+                "Píratar": "#7f7f7f",
+                "Regnboginn": "#e377c2",
+                "Samfylkingin": "#d62728",
+                "Sjálfstæðisflokkurinn": "#1f77b4",
+                "Vinstri græn": "#98df8a"
+              };
+              colorFn = function () {
+                var ans = active_choices[ this.index ];
+                return party_colors[ ans.title ];
+              };
+            }
+            if ( 'weight' in active_choices[ 0 ] ) {
+              colorFn = function () {
+                var ans = active_choices[ this.index ];
+                if ( ans.weight ===  2 ) { return '#3182bd'; }
+                if ( ans.weight ===  1 ) { return '#6baed6'; }
+                if ( ans.weight ===  0 ) { return '#7f7f7f'; }
+                if ( ans.weight === -1 ) { return '#ffbb78'; }
+                if ( ans.weight === -2 ) { return '#ff7f0e'; }
+                return "#ddd";
+              };
+            }
+
+            vis.add(pv.Bar)
+                .data(data.table)
+                .bottom(0)
+                .left(function( d ){
+                  return x( this.index );
+                })
+                .width(function( d ){
+                  return x.range().band;
+                })
+                .height(function( d ){
+                  return y( d.length );
+                })
+                .fillStyle( colorFn )
+                .antialias(false)
+                ;
+
+            vis.add(pv.Rule)
+                .data( pv.range(data.table.length) )
+                .left( function () {
+                  return x( this.index ) + x.range().band / 2;
+                })
+                .bottom(-5)
+                .height(5)
+              .anchor("bottom").add(pv.Label)
+                .text(function () {
+                  var title = data.active_question.choices[ this.index ].title;
+                  var label = title.replace( /(?=flokkurinn|vaktin|boginn|fylkingin)/, '- ' ).split( /(\s+)/ );
+                  if ( label.length === 1 ) {
+                    return title;
+                  }
+                  return label.slice( 0, label.length / 2 ).join(' ');
+                })
+              .anchor("top").add(pv.Label)
+                .textMargin( 14 )
+                .text(function () {
+                  var title = data.active_question.choices[ this.index ].title;
+                  var label = title.replace( /(?=flokkurinn|vaktin|boginn|fylkingin)/, '- ' ).split( /\s+/ );
+                  if ( label.length === 1 ) {
+                    return '';
+                  }
+                  return label.slice( label.length / 2 ).join(' ');
+                })
+                ;
+
+            vis.add(pv.Rule)
+                .bottom(0)
+                ;
+
+            var filter_title = '';
+            if ( data.filter_question && data.filter_answer ) {
+              filter_title += '  —  ';
+              filter_title += data.filter_question.short || data.filter_question.title;
+              filter_title += ': ';
+              filter_title += data.filter_answer;
+            }
+
+            vis.add(pv.Label)
+                .top( -10 )
+                .text( 'Svarendur: ' + data.population_size + filter_title )
+                .textAlign( 'center' )
+                ;
+
+            vis.add(pv.Label)
+                .top( -25 )
+                .font( '20px sans-serif' )
+                .textAlign( 'center' )
+                .textBaseline( 'bottom' )
+                .text( data.active_question.short )
+                ;
+
+            vis.render();
+
+          }
+
+
+        })(jQuery);
+        </script>
+
+<p style="border-top:1px dotted #ccc;max-width:400px;margin:80px auto;padding:4px;font-size:10px;">
+  <a href="https://github.com/borgar">borgar</a> fyrir <a href="http://gogn.in">gogn.in</a>
+</p>
+      </div>
+      </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31101018-1']);
+  _gaq.push(['_setDomainName', 'gogn.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% endblock %}
